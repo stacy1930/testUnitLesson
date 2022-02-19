@@ -16,9 +16,5 @@ class CalculateControllerTest extends WebTestCase
 
     public function testAllWebView(): void
     {
-        $client = static::createClient();
-        $crawler = $client->request('GET', '/');
-        $this->assertPageTitleContains('Hello CalculateController!');
-        $this->assertCount(16, $crawler->filter('.touch'));
     }
 }

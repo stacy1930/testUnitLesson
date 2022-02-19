@@ -14,7 +14,7 @@ class JustForTestService
         return [];
     }
 
-    public function testSame(){
+    public function testAssertEquals(){
         return "same";
     }
 

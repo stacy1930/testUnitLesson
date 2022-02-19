@@ -18,7 +18,7 @@ class JustForTestTest extends KernelTestCase
         $this->assertSame('test', $kernel->getEnvironment());
         $this->assertTrue($justForTest->testBool());
         $this->assertEmpty($justForTest->testEmpty());
-        $this->assertEquals('same', $justForTest->testSame());
+        $this->assertEquals('same', $justForTest->testAssertEquals());
         $this->assertArrayHasKey('foo', $justForTest->testAssertArrayHasKey());
         $this->assertInstanceOf(User::class, $justForTest->testInstanceOf());
     }
