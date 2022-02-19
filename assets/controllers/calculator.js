@@ -1,5 +1,6 @@
 export default function () {
   const $showResult = $(".result");
+  const baseUrl = window.location.origin + window.location.pathname;
 
   const setValue = (value) => {
     $showResult.text(value);
@@ -7,7 +8,7 @@ export default function () {
 
   const sendToApi = (endpoint, data) => {
     $.post({
-      url: `http://localhost/testUnitYnov/public/api/calculator/${endpoint}`,
+      url: `${baseUrl}api/calculator/${endpoint}`,
       data: JSON.stringify(data),
       dataType: "json",
       contentType: "application/json; charset=utf-8",
