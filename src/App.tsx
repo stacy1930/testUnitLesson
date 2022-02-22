@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./app.css";
+import Calculator from "./components/Calculator";
+import useMeteo from "./hooks/useMeteo";
 
 function App() {
+  const { meteo } = useMeteo();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      {meteo && meteo.current_condition && (
+        <div>
+          <p>Météo actuel</p>
+          <img src={meteo.current_condition.icon_big} alt="" />
+        </div>
+      )}
+      <div className="container calculate">
+        <div className="row">
+          <div className="col-6 offset-3 title">
+            <h1>calculatrice</h1>
+          </div>
+        </div>
+        <Calculator />
+      </div>
+    </main>
   );
 }
 
