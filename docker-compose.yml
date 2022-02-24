@@ -38,6 +38,13 @@ services:
     networks:
       - app-network
 
+  node:
+    image: node:14.15
+    tty: true
+    working_dir: /home/node/
+    volumes:
+      - ./:/home/node/
+
 networks:
   app-network:
     driver: bridge
