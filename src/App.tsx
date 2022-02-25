@@ -1,11 +1,21 @@
-import "./app.css";
+import "./App.css";
 import Calculator from "./components/Calculator";
 import useMeteo from "./hooks/useMeteo";
 
 function App() {
-  const { meteo } = useMeteo();
+  const { meteo, user } = useMeteo();
+
   return (
-    <main>
+    <main className="container">
+      {user && (
+        <div>
+          <p>Utilisateur</p>
+          <img src={user.picture.thumbnail} alt="" />
+          <p>
+            {user.name.title} {user.name.first} {user.name.last}
+          </p>
+        </div>
+      )}
       {meteo && meteo.current_condition && (
         <div>
           <p>Météo actuel</p>
