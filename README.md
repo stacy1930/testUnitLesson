@@ -1,3 +1,5 @@
+[![CI](https://github.com/stacy1930/testUnitLesson/actions/workflows/nodeci.yml/badge.svg?branch=testUnitJS)](https://github.com/stacy1930/testUnitLesson/actions/workflows/nodeci.yml)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
