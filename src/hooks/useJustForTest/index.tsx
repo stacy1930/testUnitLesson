@@ -1,4 +1,4 @@
-export class User {}
+export class User { }
 
 const useJustForTest = () => {
   const testBoolTrue = () => true;
@@ -12,11 +12,11 @@ const useJustForTest = () => {
   };
 
   const toContainEqual = () => {
-    return { delicious: true, sour: false };
+    return [{ delicious: true, sour: false }, { toto: true, nkm: false }];
   };
 
   const testToStrictEqual = () => {
-    return [{ delicious: true, sour: false }];
+    return { delicious: true, sour: false };
   };
 
   const testToBeLessThan = () => {
